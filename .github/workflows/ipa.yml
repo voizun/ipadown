@@ -68,7 +68,7 @@ jobs:
         shell: bash
 
       - name: Setup iTunes Header Service
-        uses: NyaMisty/actions-iTunes-header@master
+        uses: aeternas/actions-iTunes-header@6a57591ca54b74e2d1ec7024a84a275ae71bdd47
         if: ${{ github.event.inputs.operation != 'lookup' }}
         with:
           apple_id: ${{ github.event.inputs.appleId }}
