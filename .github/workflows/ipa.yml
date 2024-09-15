@@ -114,7 +114,7 @@ jobs:
         shell: bash
 
       - name: Release
-        run: gh release create '$(echo '${{ steps.operation.outputs.json }}' | jq -rjc '.appName, .appVer')' ipaDown_split/*
+        run: gh release create "'$(echo '${{ steps.operation.outputs.json }}' | jq -rjc '.appName, .appVer')'" ipaDown_split/*
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
